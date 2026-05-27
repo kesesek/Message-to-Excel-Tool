@@ -17,16 +17,16 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.utils.exceptions import InvalidFileException
 
 FIELD_PATTERNS = [
-    ("Company Name", r"(?:Company Name|Company)\s*[:：]?\s*(.+)"),
-    ("Product Info", r"(?:Product Info|Product)\s*[:：]?\s*(.+)"),
-    ("Purchase No.", r"(?:Purchase No\.?|Purchase Number|Purchase)\s*[:：]?\s*(.+)"),
-    ("Invoice No.", r"(?:Invoice No\.?|Invoice Number|Invoice)\s*[:：]?\s*(.+)"),
-    ("Delivery Date", r"(?:Delivery Date|Delivery)\s*[:：]?\s*(.+)"),
-    ("Vehicle No.", r"(?:Vehicle No\.?|Vehicle Number|Vehicle)\s*[:：]?\s*(.+)"),
-    ("Phone", r"(?:Phone|Phone No\.?|Telephone)\s*[:：]?\s*(.+)"),
-    ("Name", r"(?:Name|Driver Name|Contact Name)\s*[:：]?\s*(.+)"),
-    ("ID Card No.", r"(?:ID Card No\.?|ID Card Number|ID No\.?)\s*[:：]?\s*(.+)"),
-    ("Tonnage", r"(?:Tonnage|Weight)\s*[:：]?\s*(.+)"),
+    ("公司名称", r"(?:公司名称|公司)\s*[:：]?\s*(.+)"),
+    ("产品信息", r"(?:产品信息|产品|货物)\s*[:：]?\s*(.+)"),
+    ("采购单号", r"(?:采购单号|采购号|采购单)\s*[:：]?\s*(.+)"),
+    ("发票单号", r"(?:发票单号|发票号|发票)\s*[:：]?\s*(.+)"),
+    ("送货日期", r"(?:送货日期|交货日期|送货时间)\s*[:：]?\s*(.+)"),
+    ("车牌号", r"(?:车牌号|车辆号|车号)\s*[:：]?\s*(.+)"),
+    ("手机号", r"(?:手机号|电话|联系电话)\s*[:：]?\s*(.+)"),
+    ("姓名", r"(?:姓名|司机姓名|联系人)\s*[:：]?\s*(.+)"),
+    ("身份证号", r"(?:身份证号|身份证号码|证件号)\s*[:：]?\s*(.+)"),
+    ("吨位", r"(?:吨位|重量|吨数)\s*[:：]?\s*(.+)"),
 ]
 
 HEADER_ROW = [field for field, _ in FIELD_PATTERNS]
